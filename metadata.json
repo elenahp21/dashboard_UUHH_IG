@@ -1,0 +1,6 @@
+{
+  "name": "Guttmann Dashboard",
+  "description": "Aplicació visual i moderna per gestionar i resumir l'estat assistencial de les unitats de l'Hospital Guttmann durant caps de setmana i festius.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
