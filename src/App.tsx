@@ -33,6 +33,7 @@ const DEFAULT_UNITS: UnitData[] = [
     traqueo: 2,
     vm: 1,
     pulseraErrant: 0,
+    pacientPostQuirurgic: 0,
   },
   {
     id: 'UH2',
@@ -47,6 +48,7 @@ const DEFAULT_UNITS: UnitData[] = [
     traqueo: 0,
     vm: 0,
     pulseraErrant: 0,
+    pacientPostQuirurgic: 0,
   },
   {
     id: 'UH4',
@@ -61,6 +63,7 @@ const DEFAULT_UNITS: UnitData[] = [
     traqueo: 4,
     vm: 2,
     pulseraErrant: 1,
+    pacientPostQuirurgic: 0,
   },
   {
     id: 'UH5',
@@ -75,6 +78,7 @@ const DEFAULT_UNITS: UnitData[] = [
     traqueo: 1,
     vm: 0,
     pulseraErrant: 1,
+    pacientPostQuirurgic: 0,
   },
 ];
 
@@ -157,6 +161,7 @@ export default function App() {
         traqueo: 0,
         vm: 0,
         pulseraErrant: 0,
+        pacientPostQuirurgic: 0,
       }));
       setUnits(cleared);
     }
@@ -269,7 +274,7 @@ export default function App() {
                 type="date"
                 value={shiftDate}
                 onChange={(e) => setShiftDate(e.target.value)}
-                className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-xs"
+                className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition"
                 id="editor-date-picker"
               />
               <p className="text-[10px] text-slate-400 font-medium">
@@ -361,7 +366,7 @@ export default function App() {
           <section className="lg:col-span-8 space-y-6" id="app-preview-section">
             
             {/* Download and Share Controller card */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-3xl text-white shadow-xl shadow-blue-500/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4" id="export-action-bar">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 rounded-3xl text-white shadow-xl shadow-blue-500/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4" id="export-card">
               <div>
                 <h3 className="text-lg font-black flex items-center gap-1.5" id="export-title">
                   <FileDown className="w-5 h-5 stroke-[2.5]" />
