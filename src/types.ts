@@ -11,6 +11,7 @@ export interface UnitData {
   traqueo: number;
   vm: number;
   pulseraErrant: number;
+  pacientPostQuirurgic: number;
 }
 
 export type UnitId = 'UH1' | 'UH2' | 'UH4' | 'UH5';
